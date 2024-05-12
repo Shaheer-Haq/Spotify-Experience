@@ -130,8 +130,8 @@ This Flask web application provides music recommendations based on genre prefere
 
 
 # Contributors
-21i-1657 Shaheer-E-Haq
-21i-1694 Moeez Ahmed
+21i-1657 Shaheer-E-Haq,
+21i-1694 Moeez Ahmed,
 21i-1743 Meeran Ali
 
 # Issues
