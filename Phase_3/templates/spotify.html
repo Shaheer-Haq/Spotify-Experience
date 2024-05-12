@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="spotify.css">
+    <style>
+      * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: arial, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* SHARED */
+
+.ptb-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.pb-50 {
+  padding-bottom: 50px;
+}
+.plb-20 {
+  padding-left: 20px;
+  padding-bottom: 30px;
+}
+.ft-15 {
+  font-size: 15px;
+}
+
+/* SIDENAV */
+
+.sidenav {
+  background-color: #060505;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding: 20px 0 0 32px;
+  overflow: hidden;
+}
+.logo img {
+  max-width: 150px;
+  background-color: transparent;
+}
+.menulink a {
+  padding: 6px 6px 6px 0;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+}
+.menulink a:first-child {
+  color: white;
+  padding-left: 10px;
+  border-left: 2px solid green;
+}
+.menulink i {
+  padding-right: 20px;
+}
+.btn {
+  width: 90%;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.btn-light {
+  background-color: white;
+  color: black;
+}
+.btn-dark {
+  background-color:#2B2525;
+  color: white;
+  border-color: white;
+}
+.cookie a {
+  font-size: 11px;
+  color: white;
+}
+.fa-home, .fa-search, .fa-book {
+  color: white;
+  background-color: transparent;
+}
+
+/* MAIN SECTION */
+
+main {
+  background-color: #182F34;
+  margin-left: 250px;
+  margin-bottom: 60px;
+  color: white;
+  overflow: hidden;
+}
+.toplist ul li {
+  text-transform: uppercase;
+  padding-right: 20px;
+  font-weight: bold;
+  color: grey;
+  letter-spacing: 2px;
+}
+.toplist ul li:first-child {
+  color: white;
+}
+.toplist {
+  align-self: center;
+}
+.toplist {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.container-flex {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container-flex .toplist a {
+  justify-content: center;
+}
+.music-card {
+  padding-bottom: 30px;
+}
+.music-card img {
+  margin-left: 10px;
+  padding-left: 10px;
+  max-width: 170px;
+}
+.music-card p {
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #282828;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  color: grey;
+}
+footer i {
+  padding: 20px 20px 0 0;
+  font-size: 18px;
+}
+
+/* RESPONSIVE MEDIA  */
+
+@media all and (max-width: 768px) {
+
+  .sidenav {
+    width: 100px;
+    padding: 10px 0 0 10px;
+  }
+  main {
+    margin-left: 100px;
+  }
+  .sidenav span {
+    display: none;
+  }
+  .menulink i {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  .menulink a:first-child {
+    border: none;
+    padding: 0;
+  }
+  .logo img {
+    max-width: 80px;
+  }
+  .cookie {
+    display: none;
+  }
+  .btn {
+
+    font-size: 10px;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+
+    <aside class="sidenav">
+      <div class="logo">
+        <a href="#"><img class="pb-50" src="static/images/logorgb.png" alt=""></a>
+      </div>
+      <div class="menulink">
+        <a href="#"><i class="fas fa-home"></i><span>Home</span></a>
+      </div>
+      <div class="buttons">
+        <a href="signup.html"><button type="button" class="btn btn-light">Sign Up</button></a>
+        <a href="login.html"><button type="button" class="btn btn-dark">Log In</button></a>
+      </div>
+      <div class="cookie col-md-12 text-center">
+        <div class="col-md-4  col-sm-12 ">
+          <a href="#">Cookie Policy</a>
+        </div>
+        <div class="col-md-2 col-sm-12"> | </div>
+        <div class="col-md-6 col-sm-12">
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <div class="container-flex ptb-30 plb-20">
+        <div class=" toplist">
+          <ul class="list-inline">
+            <li><a href="#">Featured </a></li>
+             <li><a href="genres.html">Genres & Moods</a></li>
+            <li><a href="#">New Releases</a></li>
+            <li><a href="#">Discover</a></li>
+          </ul>
+        </div>
+      </div>
+        <div class="title plb-20">
+          <h1><strong>Focus with our Playlists...</strong></h1>
+        </div>
+      </div>
+        <div class=" container-flex text-center">
+          <div class="music-card">
+            <a href="#"><img src="static/images/primavera.jpg" alt=""></a>
+            <p>Spring</p>
+          </div>
+          <!-- Rest of the music cards -->
+        </div>
+        <div class="container-flex">
+          <div class="title plb-20">
+            <h1><strong>Charts</strong></h1>
+          </div>
+        </div>
+        <div class="container-flex text-center">
+          <div class="music-card">
+            <a href="#"><img src="static/images/top50.jpg" alt=""></a>
+            <p>Top 50 - Italy</p>
+          </div>
+          <!-- Rest of the music cards -->
+        </div>
+    </main>
+
+
+    <footer>
+      <div class="playmusic text-center">
+        <ul class="list-inline">
+          <li><a href="#"><i class="fas fa-random"></i></a></li>
+          <li><a href="#"><i class="fas fa-step-backward"></i></i></a></li>
+          <li><a href="#"><i class="far fa-play-circle"></i></a></li>
+          <li><a href="#"><i class="fas fa-step-forward"></i></a></li>
+          <li><a href="#"><i class="fas fa-redo"></i></a></li>
+        </ul>
+      </div>
+
+    </footer>
+  </body>
+</html>

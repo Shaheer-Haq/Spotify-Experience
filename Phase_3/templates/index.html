@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Spotify</title>
+  <style>
+    /* Add any custom styles here */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: -1;
+    }
+
+    #background-video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .get-started-container {
+      position: absolute;
+      bottom: 20px; /* Adjust bottom spacing as needed */
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    .get-started-btn {
+      background-color: green;
+      color: white;
+      padding: 15px 30px; /* Adjust height and width here */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .get-started-btn:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+    <div class="video-background">
+        <video id="background-video" autoplay muted loop>
+            <source src="static/video/login.mp4" type="video/mp4">
+            Your Browse does not support the video tag
+        </video>
+    </div>
+
+    <div class="get-started-container">
+        <a href="spotify.html" class="get-started-btn">Get Started</a>
+    </div>
+
+  <script>
+    // When the video ends, wait for 5 seconds and then redirect to spotify.html
+    document.getElementById('background-video').addEventListener('ended', function() {
+      setTimeout(function() {
+        window.location.href = 'spotify.html';
+      }, 5000); // 5000 milliseconds = 5 seconds
+    });
+  </script>
+</body>
+</html>
